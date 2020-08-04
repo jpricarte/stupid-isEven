@@ -11,5 +11,5 @@ Well, maybe someone can be, but not because of this.
 
 ## Hall of Shame
 
-Jordi Ricarte
-Felipe Graeff
+- Jordi Ricarte
+- Felipe Graeff
