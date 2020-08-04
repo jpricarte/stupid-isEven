@@ -8,3 +8,8 @@ Please, insert a comment with your name, that's how you can make sure no one wil
 ### That's just a joke, nobody here is a bad programmer
 
 Well, maybe someone can be, but not because of this.
+
+## Hall of Shame
+
+Jordi Ricarte
+Felipe Graeff
