@@ -11,6 +11,7 @@ Well, maybe someone can be, but not because of this.
 
 ## Hall of Shame
 
-- Jordi Ricarte
-- Felipe Graeff
-- [Rafael Audibert](https://www.rafaaudibert.dev)
+- Jordi Ricarte *isEven0.hs*
+- Felipe Graeff *isEven1.js*
+- [Rafael Audibert](https://www.rafaaudibert.dev) *is_even2.rb*
+- Heric Rodrigues *isEven3.html*

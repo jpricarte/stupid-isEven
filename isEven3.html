@@ -1,0 +1,31 @@
+<!-- Created by Heric Rodrigues -->
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Is even></title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <input type = "number" id = "number" onkeyup = "isEven()">
+    <select id = "isEven">
+    	<option disabled selected value> -- Input a number -- </option>
+    	<option value = "0">It's even</option>
+    	<option value = "1">It's odd</option>
+        <option value = "2">It's even</option>
+        <option value = "3">It's odd</option>
+        <option value = "4">It's even</option>
+        <option value = "5">It's odd</option>
+        <option value = "6">It's even</option>
+        <option value = "7">It's odd</option>
+        <option value = "8">It's even</option>
+    	<option value = "9">It's odd</option>
+    </select>
+  </body>
+  <script>
+  	isEven = function() {
+  		var number = document.getElementById("number").value.slice(-1)
+    	document.getElementById("isEven").value = number
+    }
+  </script>
+</html>
