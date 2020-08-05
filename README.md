@@ -13,3 +13,4 @@ Well, maybe someone can be, but not because of this.
 
 - Jordi Ricarte
 - Felipe Graeff
+- [Rafael Audibert](https://www.rafaaudibert.dev)
