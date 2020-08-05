@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CheckIfIsEven {
+public class CheckIfIsEven5 {
 
     public static void main(String[] args) {
 
