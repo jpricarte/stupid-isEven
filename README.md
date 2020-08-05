@@ -11,6 +11,6 @@ Well, maybe someone can be, but not because of this.
 
 ## Hall of Shame
 
-- Jordi Ricarte *isEven0.hs*
+- Jordi Ricarte *isEven0.hs*, *isEven4,asm*
 - Felipe Graeff *isEven1.js*, *isEven3.html*
 - [Rafael Audibert](https://www.rafaaudibert.dev) *is_even2.rb*
