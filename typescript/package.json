@@ -4,7 +4,8 @@
   "description": "An very smart isEvent library",
   "main": "isEven.ts",
   "scripts": {
-    "start": "ts-node isEven.ts"
+    "one": "ts-node isEven1.ts",
+    "two": "ts-node isEven2.ts"
   },
   "author": "",
   "license": "ISC",
