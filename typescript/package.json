@@ -1,0 +1,16 @@
+{
+  "name": "iseven",
+  "version": "1.0.0",
+  "description": "An very smart isEvent library",
+  "main": "isEven.ts",
+  "scripts": {
+    "one": "ts-node isEven1.ts",
+    "two": "ts-node isEven2.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "ts-node": "^10.4.0"
+  }
+}
