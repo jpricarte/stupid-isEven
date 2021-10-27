@@ -106,7 +106,6 @@ async function askNumber(): Promise<number> {
 async function main() {
   try {
     const waitTime = await askWaitTime();
-
     const number = await askNumber();
     const inputIsEven = isEven(number, waitTime);
     console.info(`This value ${inputIsEven ? "is" : "is not"} even`);
