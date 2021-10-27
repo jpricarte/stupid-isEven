@@ -1,7 +1,14 @@
 import readline from "readline";
 
+const notANumberErrorMessage = "This value is not a number!";
+
 function isEven(entryValue: string): [boolean, number] {
   const lastNumberOfEntryValue = parseInt(getLastChar(entryValue));
+
+  if (Number.isNaN(lastNumberOfEntryValue)) {
+    throw Error(notANumberErrorMessage);
+  }
+
   let attempts = 0;
   for (const randomValue of randomIntegerGenerator(0, 9)) {
     attempts += 1;
