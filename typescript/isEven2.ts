@@ -3,11 +3,9 @@ import readline from "readline";
 const notANumberErrorMessage = "This value is not a number!";
 
 function isEven(entryValue: string): [boolean, number] {
-  const lastNumberOfEntryValue = parseInt(getLastChar(entryValue));
-
-  if (Number.isNaN(lastNumberOfEntryValue)) {
-    throw Error(notANumberErrorMessage);
-  }
+  const lastNumberOfEntryValue = convertStringToInteger(
+    getLastChar(entryValue)
+  );
 
   let attempts = 0;
   for (const randomValue of randomIntegerGenerator(0, 9)) {
@@ -18,6 +16,14 @@ function isEven(entryValue: string): [boolean, number] {
     }
   }
   return [false, 0];
+}
+
+function convertStringToInteger(str: string) {
+  const number = parseInt(str);
+  if (Number.isNaN(number)) {
+    throw Error(notANumberErrorMessage);
+  }
+  return number;
 }
 
 function getLastChar(str: string): string {
@@ -42,26 +48,32 @@ function* randomIntegerGenerator(
   }
 }
 
-const readlineInterface = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-function main() {
-  readlineInterface.question("What's the value? ", (input: string) => {
-    try {
-      const [inputIsEven, attempts] = isEven(input);
-      console.info(
-        `After ${attempts} attempts we found that this value ${
-          inputIsEven ? "is" : "is not"
-        } even`
-      );
-    } catch (e) {
-      const error = e as Error;
-      console.error(error.message);
-    }
-    readlineInterface.close();
+async function askInputValue(): Promise<string> {
+  const readlineInterface = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
   });
+  return new Promise((resolve, reject) => {
+    readlineInterface.question("What's the number? ", (input: string) => {
+      readlineInterface.close();
+      resolve(input);
+    });
+  });
+}
+
+async function main() {
+  try {
+    const input = await askInputValue();
+    const [inputIsEven, attempts] = isEven(input);
+    console.info(
+      `After ${attempts} attempts we found that this value ${
+        inputIsEven ? "is" : "is not"
+      } even`
+    );
+  } catch (e) {
+    const error = e as Error;
+    console.error(error.message);
+  }
 }
 
 main();
